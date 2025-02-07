@@ -1,8 +1,14 @@
-import React from 'react'
+import './index.css';
+import Navbar from './components/NavBar/NavBar';
+import Hero from './components/Hero/Hero';
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Navbar/>
+      <Hero />
+    </div>
   )
 }
 
