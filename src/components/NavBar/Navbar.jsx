@@ -11,17 +11,17 @@ const Menu = [
   },
   {
     id: 2,
-    name: "Top Rated",
+    name: "Grossaries",
     link: "/#Services",
   },
   {
     id: 3,
-    name: "Kids Wear",
+    name: "Home Appliances",
     link: "/#",
   },
   {
     id: 4,
-    name: "Men Wear",
+    name: "Apparel",
     link: "/#",
   },
   {
@@ -34,17 +34,22 @@ const Menu = [
 const DropdownLinks = [
   {
     id: 1,
-    name: "Trending",
+    name: "Register a shop",
     link: "/#",
   },
   {
     id: 2,
-    name: "Best Selling",
+    name: "Top shops",
     link: "/#",
   },
   {
     id: 3,
     name: "Top Rated",
+    link: "/#",
+  },
+  {
+    id: 4,
+    name: "Contacts",
     link: "/#",
   },
 ];
@@ -65,9 +70,10 @@ const Navbar = () => {
             <div className="relative group hidden sm:block">
               <input
                 type="text"
-                placeholder="search"
-                className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all-duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800"
+                placeholder="Search"
+                className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 ease-in-out rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-primary dark:border-gray-500 dark:bg-gray-800"
               />
+
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1 translate-y-1/2 right-3" />
             </div>
           </div>
@@ -104,7 +110,7 @@ const Navbar = () => {
           {/*dropdown and links*/}
           <li className="group relative cursor-pointer">
             <a href="#" className="flex items-center gap-[2px] py-2">
-              Trending
+              More
               <span>
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
@@ -113,7 +119,12 @@ const Navbar = () => {
               <ul>
                 {DropdownLinks.map((data) => (
                   <li key={data.id}>
-                    <a href={data.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">{data.name}</a>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                    >
+                      {data.name}
+                    </a>
                   </li>
                 ))}
               </ul>
