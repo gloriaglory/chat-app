@@ -3,7 +3,6 @@ import { FaCaretDown } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import DarkMode from "../DarkMode";
 
-
 const Menu = [
   {
     id: 1,
@@ -78,8 +77,7 @@ const Navbar = () => {
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1 translate-y-1/2 right-3" />
             </div>
           </div>
-          <div 
-          className="flex items-center gap-3">
+          <div className="flex items-center gap-3">
             {/*order button*/}
             <button
               onClick={() => alert("Ordering not available yet")}
