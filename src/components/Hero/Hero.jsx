@@ -4,9 +4,9 @@ import { FadeRight, FadeUp } from "../animation/animation";
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] gap-0 flex justify-center items-center dark:text-white">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] gap-0 flex justify-center items-center dark:text-white  pb-0">
       {/*Hero section*/}
-      <div className="container gap-0 pb-0">
+      <div className="container gap-0">
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2">
             <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">

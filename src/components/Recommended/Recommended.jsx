@@ -50,11 +50,52 @@ const ProductsData = [
     Service: "Electronics and electical appliances",
     delay: 0.6,
   },
+  {
+    id: 1,
+    img: Image2,
+    tittle: "Mama Mzungu Shop",
+    rating: 5.0,
+    Service: "retail shop",
+    delay: 0.2,
+  },
+
+  {
+    id: 2,
+    img: Image0,
+    tittle: "Flora kids wear",
+    rating: 5.0,
+    Service: "Children clothing",
+    delay: 0.3,
+  },
+  {
+    id: 3,
+    img: Image3,
+    tittle: "Mbweni Cosmetics",
+    rating: 5.0,
+    Service: "Beauty 7 cosmetics",
+    delay: 0.4,
+  },
+  {
+    id: 4,
+    img: Image4,
+    tittle: "Shoppers Supermarket",
+    rating: 5.0,
+    Service: "Retail shop",
+    delay: 0.5,
+  },
+  {
+    id: 5,
+    img: Image5,
+    tittle: "Umoja Technologies",
+    rating: 5.0,
+    Service: "Electronics and electical appliances",
+    delay: 0.6,
+  },
 ];
 
 const Recommended = () => {
   return (
-    <div className="mt-10 mb-12 flex justify-center">
+    <div className="mt-10 mb-12 flex justify-center pb-10">
       <div className="container">
         {/* Title and Filter Button Section */}
         <div className="flex justify-between items-center px-6 ">
@@ -98,7 +139,7 @@ const Recommended = () => {
               </motion.div>
             ))}
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end mt-12">
             <button className="flex items-center gap-2 px-4 py-2 bg-primary text-white font-semibold rounded-full transition-transform duration-300 ease-in-out hover:translate-x-2">
               <FiArrowRight className="w-5 h-5" />
             </button>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
@@ -7,26 +8,26 @@ const Menu = [
   {
     id: 1,
     name: "Home",
-    link: "/#",
+    link: "/home",
   },
   {
     id: 2,
-    name: "Grossaries",
+    name: "Products",
     link: "/#Services",
   },
   {
     id: 3,
-    name: "Home Appliances",
+    name: "Shops",
     link: "/#",
   },
   {
     id: 4,
-    name: "Apparel",
+    name: "P2P",
     link: "/#",
   },
   {
     id: 5,
-    name: "Electronics",
+    name: "Sell Products",
     link: "/#",
   },
 ];
@@ -56,7 +57,7 @@ const DropdownLinks = [
 
 const Navbar = () => {
   return (
-    <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
+    <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200  z-40 sticky top-0">
       {/* Upper Navbar */}
       <div className="bg-orange-50 py-2">
         <div className="container flex justify-between items-center">
@@ -97,15 +98,15 @@ const Navbar = () => {
       <div className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
           {Menu.map((data) => (
-            <li key={data.id}>
-              <a
-                href={data.link}
-                className="inline-block px-4 hover:text-primary duration-200"
-              >
-                {" "}
-                {data.name}
-              </a>
-            </li>
+           <li key={data.id}>
+           <Link
+             to={data.link}
+             className="inline-block px-4 hover:text-primary duration-200"
+           >
+             {data.name}
+           </Link>
+         </li>
+         
           ))}
           {/*dropdown and links*/}
           <li className="group relative cursor-pointer">

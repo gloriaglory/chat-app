@@ -53,11 +53,55 @@ const ProductsData = [
     Service: "Electronics & Appliances",
     delay: 0.6,
   },
+  {
+  id: 1,
+  img: Image2,
+  tittle: "Mama Mzungu Shop",
+  rating: 5.0,
+  Service: "Retail shop",
+  delay: 0.2,
+},
+
+{
+  id: 2,
+  img: Image0,
+  tittle: "Flora Kids Wear",
+  rating: 5.0,
+  Service: "Children clothing",
+  delay: 0.3,
+},
+
+{
+  id: 3,
+  img: Image3,
+  tittle: "Mbweni Cosmetics",
+  rating: 5.0,
+  Service: "Beauty & Cosmetics",
+  delay: 0.4,
+},
+
+{
+  id: 4,
+  img: Image4,
+  tittle: "Shoppers Supermarket",
+  rating: 5.0,
+  Service: "Retail shop",
+  delay: 0.5,
+},
+
+{
+  id: 5,
+  img: Image5,
+  tittle: "Umoja Technologies",
+  rating: 5.0,
+  Service: "Electronics & Appliances",
+  delay: 0.6,
+},
 ];
 
 const Products = () => {
   return (
-    <div className="mt-14 mb-12 bg-gray-100 flex justify-center dark:bg-black gap-0">
+    <div className="mt-14 mb-12 bg-gray-100 flex justify-center dark:bg-black gap-0 pb-20 ">
       <div className="container mt-10">
         {/* Header */}
         <div className="text-center mb-10 max-w-[600px] mx-auto dark:text-white">
@@ -79,7 +123,7 @@ const Products = () => {
                 variants={FadeLeft(data.delay)}
                 initial="hidden"
                 whileInView="visible"
-                className="w-[220px] h-[280px] p-4 bg-white/50 rounded-3xl hover:scale-300 transition duration-500"
+                className="w-[220px] h-[280px] p-4 dark:bg-gray-900 hover:scale-300 transition duration-500 rounded-2xl shadow-md"
               >
                 <img
                   src={data.img}
