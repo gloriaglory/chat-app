@@ -123,7 +123,8 @@ const Products = () => {
                 variants={FadeLeft(data.delay)}
                 initial="hidden"
                 whileInView="visible"
-                className="w-[220px] h-[280px] p-4 dark:bg-gray-900 hover:scale-300 transition duration-500 rounded-2xl shadow-md"
+                className="w-[220px] h-[280px] p-4 dark:bg-gray-900 shadow-md"
+
               >
                 <img
                   src={data.img}

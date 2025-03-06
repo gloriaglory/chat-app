@@ -127,8 +127,8 @@ const Home = () => {
         <a
           href="#explore"
           className={`cursor-pointer ${
-            selectedOption === "Explore" ? "text-primary" : "text-gray-700"
-          } hover:text-primary transition-colors duration-300`}
+            selectedOption === "Explore" ? "text-primary" : "text-gray-700 dark:text-white"
+          } dark:hover:text-primary hover:text-primary transition-colors duration-300`}
           onClick={() => setSelectedOption("Explore")}
         >
           Explore
@@ -136,8 +136,8 @@ const Home = () => {
         <a
           href="#wholesale"
           className={`cursor-pointer ${
-            selectedOption === "Wholesale" ? "text-primary" : "text-gray-700"
-          } hover:text-primary transition-colors duration-300`}
+            selectedOption === "Wholesale" ? "text-primary" : "text-gray-700 dark:text-white"
+          } dark:hover:text-primary hover:text-primary transition-colors duration-300`}
           onClick={() => setSelectedOption("Wholesale")}
         >
           Wholesale
@@ -145,8 +145,8 @@ const Home = () => {
         <a
           href="#retail"
           className={`cursor-pointer ${
-            selectedOption === "Retail" ? "text-primary" : "text-gray-700"
-          } hover:text-primary transition-colors duration-300`}
+            selectedOption === "Retail" ? "text-primary" : "text-gray-700 dark:text-white"
+          } dark:hover:text-primary hover:text-primary transition-colors duration-300`}
           onClick={() => setSelectedOption("Retail")}
         >
           Retail
@@ -161,7 +161,8 @@ const Home = () => {
           onChange={(e) => setCategory(e.target.value)}
         >
           {categories.map((cat) => (
-            <option key={cat} value={cat}>
+            <option
+             key={cat} value={cat}>
               {cat}
             </option>
           ))}
@@ -173,7 +174,8 @@ const Home = () => {
         {filterProducts().map((product) => (
           <div
             key={product.id}
-            className="relative border p-4 rounded shadow-lg"
+            className="relative p-4 border rounded shadow-lg hover:scale-105 transition-transform duration-500"
+
           >
             {/* Icons Positioned at the Top-Left of Each Card */}
             <div className="absolute top-2 right-2 flex gap-2">
