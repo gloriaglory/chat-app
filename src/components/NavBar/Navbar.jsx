@@ -13,7 +13,7 @@ const Menu = [
   {
     id: 2,
     name: "Products",
-    link: "/#Services",
+    link: "/#",
   },
   {
     id: 3,

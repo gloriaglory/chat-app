@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Router> 
       <div style={bgStyle} className="dark:bg-black min-h-screen gap-0">
-        <div className="min-h-screen bg-white/50 backdrop-blur-3xl dark:bg-black/50 gap-0">
+        <div className="min-h-screen bg-white/80 backdrop-blur-3xl dark:bg-black/80 gap-0">
           <Navbar /> 
           
           {/* Routes */}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaHeart, FaShareAlt } from "react-icons/fa";
 import Image4 from "/assets/Image4.png";
 
 const products = [
@@ -93,53 +93,6 @@ const products = [
     img: Image4,
     type: "Wholesale",
   },
-  {
-    id: 1,
-    name: "Laptop",
-    category: "Electronics",
-    price: 1800,
-    rating: 5,
-    img: Image4,
-    type: "Retail",
-  },
-  {
-    id: 2,
-    name: "Refrigerator",
-    category: "Home Appliances",
-    price: 3500,
-    rating: 4,
-    img: Image4,
-    type: "Wholesale",
-  },
-  {
-    id: 3,
-    name: "T-shirt",
-    category: "Apparel",
-    price: 1200,
-    rating: 5,
-    img: Image4,
-    type: "Retail",
-  },
-  {
-    id: 4,
-    name: "Headphones",
-    category: "Electronics",
-    price: 100000,
-    rating: 4,
-    img: Image4,
-    type: "Retail",
-  },
-  {
-    id: 13,
-    name: "Bread",
-    category: "Groceries",
-    price: 212300,
-    rating: 5,
-    img: Image4,
-    type: "Wholesale",
-  },
-
-
 ];
 
 const categories = [
@@ -164,7 +117,7 @@ const Home = () => {
   };
 
   const addToCart = (product) => {
-    setCart([...cart, product]); 
+    setCart([...cart, product]);
   };
 
   return (
@@ -218,17 +171,27 @@ const Home = () => {
       {/* Product Listing */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
         {filterProducts().map((product) => (
-          <div key={product.id} className="border p-4 rounded shadow-lg">
+          <div
+            key={product.id}
+            className="relative border p-4 rounded shadow-lg"
+          >
+            {/* Icons Positioned at the Top-Left of Each Card */}
+            <div className="absolute top-2 right-2 flex gap-2">
+              <FaHeart className="dark:text-white text-primary cursor-pointer" />
+              <FaShareAlt className="text-primary cursor-pointer" />
+            </div>
+
             <img
               src={product.img}
               alt=""
               className="h-[150px] w-[150px] object-cover rounded-full mx-auto"
             />
-            <h3 className="text-lg  dark:text-white font-bold">
+            <h3 className="text-lg dark:text-white font-bold">
               {product.name}
             </h3>
             <p className="text-gray-500">{product.category}</p>
             <p className="text-green-500">Tsh{product.price}/=</p>
+
             <div className="flex">
               {[...Array(product.rating)].map((_, i) => (
                 <FaStar key={i} className="text-yellow-500" />
@@ -244,73 +207,6 @@ const Home = () => {
           </div>
         ))}
       </div>
-
-      {/* Conditional Rendering of Wholesale and Retail Content */}
-      {selectedOption === "Wholesale" && (
-        <div id="wholesale" className="p-4">
-          <h2 className="text-xl font-bold">Wholesale Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            {products
-              .filter((product) => product.type === "Wholesale")
-              .map((product) => (
-                <div key={product.id} className="border p-4 rounded shadow-lg">
-                  <img
-                    src={product.img}
-                    alt=""
-                    className="h-[150px] w-[150px] object-cover rounded-full mx-auto"
-                  />
-                  <h3 className="text-lg dark:text-white font-bold">{product.name}</h3>
-                  <p className="text-gray-500">{product.category}</p>
-                  <p className="text-green-500">Tsh{product.price}/=</p>
-                  <div className="flex">
-                    {[...Array(product.rating)].map((_, i) => (
-                      <FaStar key={i} className="text-yellow-500" />
-                    ))}
-                  </div>
-                  <button
-                    className="mt-2 bg-primary text-white px-4 py-1 rounded"
-                    onClick={() => addToCart(product)}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              ))}
-          </div>
-        </div>
-      )}
-
-      {selectedOption === "Retail" && (
-        <div id="retail" className="p-4">
-          <h2 className="text-xl font-bold">Retail Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            {products
-              .filter((product) => product.type === "Retail")
-              .map((product) => (
-                <div key={product.id} className="border p-4 rounded shadow-lg">
-                  <img
-                    src={product.img}
-                    alt=""
-                    className="h-[150px] w-[150px] object-cover rounded-full mx-auto"
-                  />
-                  <h3 className="text-lg dark:text-white font-bold">{product.name}</h3>
-                  <p className="text-gray-500">{product.category}</p>
-                  <p className="text-green-500">Tsh{product.price}/=</p>
-                  <div className="flex">
-                    {[...Array(product.rating)].map((_, i) => (
-                      <FaStar key={i} className="text-yellow-500" />
-                    ))}
-                  </div>
-                  <button
-                    className="mt-2 bg-primary text-white px-4 py-1 rounded-3xl"
-                    onClick={() => addToCart(product)}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
