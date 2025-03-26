@@ -13,17 +13,12 @@ const Menu = [
   {
     id: 2,
     name: "Products",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Shops",
-    link: "/#",
+    link: "/Products",
   },
   {
     id: 4,
     name: "P2P",
-    link: "/#",
+    link: "/p2p",
   },
   {
     id: 5,
@@ -71,7 +66,7 @@ const Navbar = () => {
             <div className="relative group hidden sm:block">
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Search.."
                 className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 ease-in-out rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-primary dark:border-gray-500 dark:bg-gray-800"
               />
 

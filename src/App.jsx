@@ -5,6 +5,7 @@ import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Products";
 import Recommended from "./components/Recommended/Recommended";
 import Reviews from "./components/Reviews/Reviews";
+import P2P from "./components/P2P/P2P";
 import Footer from "./components/Footer/Footer";
 import Image5 from "/assets/Image5.png";
 import Home from "./components/Home/Home"; 
@@ -36,6 +37,8 @@ const App = () => {
             } />
 
             <Route path="/home" element={<Home />} />
+            <Route path="/Products" element={<Products />} />
+            <Route path="/p2p" element={<P2P />} />
           </Routes>
         </div>
       </div>
